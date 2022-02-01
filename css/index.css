@@ -1,0 +1,262 @@
+* {
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    list-style: none;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer"
+    ;
+}
+
+/*GERAL*/
+
+/*HEADER*/
+
+#header {
+    grid-area: header;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    background-color: #b80000;
+}
+
+
+#logo {
+    display: block;
+    text-align: center;
+    max-width: 250px;
+    margin: 15px auto 0 auto;
+    color: white;
+}
+
+/*HEADER*/
+
+/*HEADER NAV*/
+
+#estados, #mundo, #categorias {
+    display: none;
+}
+
+#nav #nav-menu, #nav #nav-menu li, #nav #nav-menu a, #nav #nav-menu span, #nav {
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+} 
+
+#nav #nav-menu .nav-item {
+    margin-left: 30px;
+}
+
+#nav {
+    background: #b80000;
+    padding: 15px;
+    user-select: none;
+    margin-bottom: 15px;
+}
+
+#nav.ativo {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+}
+
+#btn {
+    display: flex;
+}
+
+#btn span:hover {
+    cursor: pointer;
+    background-color: #970000;
+}
+
+#btn span {
+    background: none;
+    border: none;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+}
+
+#btn span:first-child {
+    margin-left: 30px;
+}
+
+#nav li {
+    padding: 5px 7px;
+}
+
+#nav li:hover {
+    background: #970000;
+    cursor: pointer;
+}
+
+#nav.ativo #search-bar {
+    position: absolute;
+    left: 0;
+    top: 66px;
+    width: 100%;
+    display: none;
+}
+
+#nav.ativo #search-bar.ativo {
+    display: block;
+}
+
+#nav #search-bar {
+    position: absolute;
+    left: 0;
+    top: 133.5px;
+    width: 100%;
+    display: none;
+}
+
+#nav #search-bar.ativo {
+    display: block;
+}
+
+#search-input {
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    width: 100%;
+    background: #b80000;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    border-top: 2px solid #970000;
+}
+
+#search-input::placeholder {
+    color: rgb(255, 255, 255, 0.7);
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+#estados, #mundo, #tipos {
+    display: none;
+    position: absolute;
+    background-color: #b80000;
+    top: 134px;
+}
+
+#estados a, #mundo a, #tipos a {
+    color: white;
+}
+
+#nav.ativo #estados, #nav.ativo #mundo, #nav.ativo #tipos {
+    top: 66px;
+}
+
+
+#estados.ativo, #mundo.ativo, #tipos.ativo {
+    display: block;
+    width: 160px;
+}
+
+/*HEADER NAV*/
+
+/*CONTENT*/
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+#content a:hover h2 {
+    text-decoration: underline;
+}
+
+.big {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.big img {
+    width: 620px;
+    height: 270px;
+    justify-self: start;
+}
+
+.medium {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.medium-item {
+    width: 350px;
+}
+
+.medium-item img {
+    width: 350px;
+}
+
+.medium-item p {
+    text-align: justify;
+}
+
+.medium-item:nth-child(1), .medium-item:nth-child(2), .medium-item:nth-child(3) {
+    margin-bottom: 15px;
+}
+
+.small {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.small-item img {
+    width: 170px;
+    height: 70px;
+}
+
+.small-item {
+    display: flex;
+    margin-bottom: 15px;
+    max-width: 50%;
+}
+
+.small-item p {
+    font-size: 13px;
+    max-width: 90%;
+}
+
+.small-content {
+    margin-left: 15px;
+}
+
+
+.medium h2, .small h2 {
+    font-size: 18px;
+}
+
+/*CONTENT*/
+
+/*FOOTER*/
+
+#footer {
+    background: #b80000;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    padding: 30px;
+}
+
+/*FOOTER*/
