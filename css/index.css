@@ -218,10 +218,18 @@ img {
         margin: 0 !important;
     }
     
-    #nav-menu.mobile {
+    #nav.ativo #nav-menu.mobile {
         display: block !important;
         position: absolute;
         top: 66px;
+        background: #b80000;
+        width: 100%;
+    }
+
+    #nav #nav-menu.mobile {
+        display: block !important;
+        position: absolute;
+        top: 133.8px;
         background: #b80000;
         width: 100%;
     }
@@ -241,7 +249,6 @@ img {
 
     #nav-menu {
         display: none !important;
-        
     }    
 
     #mobile-btn {
