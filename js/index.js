@@ -14,6 +14,8 @@ const int_item = document.getElementById('mundo')
 const cat_nav = document.getElementById('categorias');
 const cat_item = document.getElementById('tipos');
 
+const mobile_btn = document.getElementById('mobile-btn');
+
 function sticky() {
     if (nav.classList.contains('ativo')) {
         sticky_btn.innerHTML = 'lock_open';
@@ -118,6 +120,10 @@ function close(e) {
     }
 }
 
+function mobile() {
+    document.getElementById('nav-menu').classList.toggle('mobile');
+}
+
 search_btn.addEventListener('click', search);
 
 sticky_btn.addEventListener('click', sticky);
@@ -129,3 +135,5 @@ int_nav.addEventListener('click', mundo);
 cat_nav.addEventListener('click', tipos);
 
 document.body.addEventListener('click', close);
+
+mobile_btn.addEventListener('click', mobile);
